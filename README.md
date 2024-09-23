@@ -1,5 +1,5 @@
-##Installing MariaDB, Setting Password, and Importing Database on Ubuntu Linux
-#This guide will walk you through the process of installing MariaDB on Ubuntu Linux, setting a password, and importing a database from a SQL file. MariaDB is a popular open-source relational database management system, and it's commonly used in web development environments.
+##Installing MariaDB, Setting Password, and Importing Database on Ubuntu Linux##
+#This guide will walk you through the process of installing MariaDB on Ubuntu Linux, setting a password, and importing a database from a SQL file. MariaDB is a popular open-source relational database management system, and it's commonly used in web development environments.#
 ##Setup MariaDB and Import MySQL
 #Before installing any new software, it's essential to update the package lists to ensure you're getting the latest versions available.
 'sudo apt update
