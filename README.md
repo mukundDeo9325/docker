@@ -31,3 +31,8 @@ show databases;
 show tables;
 select * from tbl_workers;
 ```
+```bash 
+ls 
+cd 
+cp 
+```sql
