@@ -1,27 +1,19 @@
+##Installing MariaDB, Setting Password, and Importing Database on Ubuntu Linux
+#This guide will walk you through the process of installing MariaDB on Ubuntu Linux, setting a password, and importing a database from a SQL file. MariaDB is a popular open-source relational database management system, and it's commonly used in web development environments.
+##Setup MariaDB and Import MySQL
+#Before installing any new software, it's essential to update the package lists to ensure you're getting the latest versions available.
+'sudo apt update
+sudo apt install mariadb-server
+sudo systemctl start mariadb
+sudo systemctl enable mariadb
+sudo mysql_secure_installation
+sudo mysql -u root -p'
+'CREATE DATABASE springbackend;
+GRANT ALL PRIVILEGES ON springbackend.* TO 'username'@'localhost' IDENTIFIED BY 'your_password';'
+##Import Database from SQL File
+"sudo mysql -u username -p springbackend < springbackend.sql"
+"sudo mysql -u root -p"
+"show databases;
+show tables;
+select * from tbl_workers;"
 
-# docker
-# docker
-## docker file 
-#!/bin/bash 
-
-# docker installation on ubuntu 
-
-# Set up Docker's apt repository.
-
-# Add Docker's official GPG key:
-sudo apt-get update -y 
-sudo apt-get install ca-certificates curl -y
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-
-# Add the repository to Apt sources:
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get update 
-
-# To install the latest version, run:
-
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
